@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
     message: "Hello Express App!!",
   })
 })
-server.listen(5000, () => {
-  console.log("listening on *:5000")
+server.listen(process.env.PORT || 5000, () => {
+  console.log(`listening on *:${process.env.PORT}`)
 })
